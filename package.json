@@ -31,7 +31,7 @@
     "test-ci": "npm run eslint && npm run mocha",
     "browserify": "browserify src/index.js -t babelify --standalone switchPath --outfile dist/switch-path.js",
     "uglify": "uglifyjs dist/switch-path.js -o dist/switch-path.min.js",
-    "precompile-lib": "rm -rf lib/ && mkdir -p lib",
+    "precompile-lib": "rm -rf lib/ && mkdir lib",
     "compile-lib": "babel -d lib/ src/",
     "dist": "npm run browserify && npm run uglify",
     "prepublish": "npm run compile-lib",
